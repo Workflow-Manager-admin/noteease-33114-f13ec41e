@@ -1,0 +1,75 @@
+<div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <span class="app-title">NoteEase</span>
+      <button class="new-note-btn" (click)="newNote()">
+        + New
+      </button>
+    </div>
+    <div class="search-box">
+      <input
+        type="search"
+        placeholder="Search notes..."
+        [(ngModel)]="searchQuery"
+        (input)="onSearch(searchQuery)" />
+    </div>
+    <ul class="notes-list">
+      <li
+        *ngFor="let note of filteredNotes"
+        [class.selected]="selectedNote?.id === note.id"
+        (click)="selectNote(note)">
+        <div class="preview-title">{{ note.title }}</div>
+        <div class="preview-snippet">{{ note.content | slice:0:60 }}{{ note.content.length > 60 ? '...' : '' }}</div>
+        <button class="delete-btn" (click)="deleteNote(note); $event.stopPropagation()" title="Delete">&times;</button>
+      </li>
+      <li class="empty-state" *ngIf="filteredNotes.length === 0">
+        <span>No notes found.</span>
+      </li>
+    </ul>
+  </aside>
+  <main class="main-content">
+    <!-- New Note or Edit -->
+    <section *ngIf="editMode" class="note-editor">
+      <input
+        class="note-title-input"
+        [(ngModel)]="formTitle"
+        maxlength="100"
+        placeholder="Note Title"
+        tabindex="1"
+      >
+      <textarea
+        class="note-content-input"
+        [(ngModel)]="formContent"
+        rows="12"
+        maxlength="2000"
+        placeholder="Write your note here..."
+        tabindex="2"
+      ></textarea>
+      <div class="editor-toolbar">
+        <button (click)="saveNote()" [disabled]="!formTitle.trim()">
+          {{ isCreatingNew ? 'Create' : 'Save' }}
+        </button>
+        <button class="secondary" (click)="cancelEdit()">Cancel</button>
+      </div>
+    </section>
+    <!-- Read-Only View -->
+    <section *ngIf="!editMode && selectedNote" class="note-details">
+      <div class="note-details-header">
+        <h2 class="note-details-title">{{ selectedNote.title }}</h2>
+        <div class="note-details-actions">
+          <button (click)="startEdit()">Edit</button>
+          <button class="delete-btn" (click)="deleteNote(selectedNote)">Delete</button>
+        </div>
+      </div>
+      <div class="note-details-content">{{ selectedNote.content }}</div>
+      <div class="note-meta">
+        <span>Created: {{ selectedNote.createdAt | date:'medium' }}</span>
+        <span>Last edited: {{ selectedNote.updatedAt | date:'medium' }}</span>
+      </div>
+    </section>
+    <!-- Empty State -->
+    <section *ngIf="!editMode && !selectedNote" class="main-empty-state">
+      <p>Select or create a note to begin.</p>
+    </section>
+  </main>
+</div>

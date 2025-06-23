@@ -1,0 +1,1319 @@
+
+> angular@0.0.0 start
+> ng serve --host 0.0.0.0  --no-hmr --disable-host-check --port 3000
+
+Warning: Running a server with --disable-host-check is a security risk. See https://medium.com/webpack/webpack-dev-server-middleware-security-issues-1489d950874a for more information.
+The "disableHostCheck" option will not be used because it is not supported by the "@angular-devkit/build-angular:application" builder.
+❯ Building...
+✔ Building...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+polyfills.js         | polyfills        |  90.20 kB | 
+main.js              | main             |  22.59 kB | 
+styles.css           | styles           |  95 bytes | 
+
+                     | Initial total    | 112.88 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+polyfills.server.mjs | polyfills.server | 572.91 kB | 
+chunk-6XEG6CM6.mjs   | -                |  23.02 kB | 
+server.mjs           | server           |   1.39 kB | 
+main.server.mjs      | main.server      | 800 bytes | 
+
+Application bundle generation complete. [2.632 seconds]
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://172.17.0.2:3000/
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.524 seconds]
+
+✘ [ERROR] Could not resolve "./notes/notes.component"
+
+    src/app/app.routes.ts:1:31:
+      1 │ import { NotesComponent } from './notes/notes.component';
+        ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2307: Cannot find module './notes/notes.component' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.routes.ts:2:31:
+      2 │ import { NotesComponent } from './notes/notes.component';
+        ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./notes/notes.component"
+
+    src/app/app.routes.ts:1:31:
+      1 │ import { NotesComponent } from './notes/notes.component';
+        ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.006 seconds]
+
+✘ [ERROR] Could not resolve "./notes/notes.component"
+
+    src/app/app.routes.ts:1:31:
+      1 │ import { NotesComponent } from './notes/notes.component';
+        ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2307: Cannot find module './notes/notes.component' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.routes.ts:2:31:
+      2 │ import { NotesComponent } from './notes/notes.component';
+        ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./notes/notes.component"
+
+    src/app/app.routes.ts:1:31:
+      1 │ import { NotesComponent } from './notes/notes.component';
+        ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.202 seconds]
+
+▲ [WARNING] Import "NotesComponent" will always be undefined because the file "src/app/notes/notes.component.ts" has no exports [import-is-undefined]
+
+    src/app/app.routes.ts:1:9:
+      1 │ import { NotesComponent } from './notes/notes.component';
+        ╵          ~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2307: Cannot find module './notes/notes.component' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.routes.ts:2:31:
+      2 │ import { NotesComponent } from './notes/notes.component';
+        ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.627 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @for or make sure that either the `NgFor` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:18:9:
+      18 │         *ngFor="let note of filteredNotes"
+         ╵          ~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:25:31:
+      25 │       <li class="empty-state" *ngIf="filteredNotes.length === 0">
+         ╵                                ~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:32:14:
+      32 │     <section *ngIf="editMode" class="note-editor">
+         ╵               ~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:56:14:
+      56 │     <section *ngIf="!editMode && selectedNote" class="note-details">
+         ╵               ~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:71:14:
+      71 │     <section *ngIf="!editMode && !selectedNote" class="main-empty-...
+         ╵               ~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:13:8:
+      13 │         [(ngModel)]="searchQuery"
+         ╵         ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8004: No pipe found with name 'slice'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:22:55:
+      22 │ ...w-snippet">{{ note.content | slice:0:60 }}{{ note.content.lengt...
+         ╵                                 ~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:35:8:
+      35 │         [(ngModel)]="formTitle"
+         ╵         ~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'textarea'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:42:8:
+      42 │         [(ngModel)]="formContent"
+         ╵         ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG1: Object is possibly 'null'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:58:55:
+      58 │         <h2 class="note-details-title">{{ selectedNote.title }}</h2>
+         ╵                                                        ~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG5: Argument of type 'Note | null' is not assignable to parameter of type 'Note'.
+  Type 'null' is not assignable to type 'Note'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:61:57:
+      61 │ ...ss="delete-btn" (click)="deleteNote(selectedNote)">Delete</button>
+         ╵                                        ~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG1: Object is possibly 'null'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:64:56:
+      64 │ ...<div class="note-details-content">{{ selectedNote.content }}</div>
+         ╵                                                      ~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG1: Object is possibly 'null'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:66:39:
+      66 │ ...<span>Created: {{ selectedNote.createdAt | date:'medium' }}</span>
+         ╵                                   ~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8004: No pipe found with name 'date'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:66:51:
+      66 │ ...<span>Created: {{ selectedNote.createdAt | date:'medium' }}</span>
+         ╵                                               ~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG1: Object is possibly 'null'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:67:43:
+      67 │ ...n>Last edited: {{ selectedNote.updatedAt | date:'medium' }}</span>
+         ╵                                   ~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8004: No pipe found with name 'date'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:67:55:
+      67 │ ...n>Last edited: {{ selectedNote.updatedAt | date:'medium' }}</span>
+         ╵                                               ~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:8:15:
+      8 │   templateUrl: './notes.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.862 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+▲ [WARNING] TS-998113: NgClass is not used within the template of NotesComponent [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:14:17:
+      14 │     NgFor, NgIf, NgClass, FormsModule, DatePipe
+         ╵                  ~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'newNote' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:5:44:
+      5 │       <button class="new-note-btn" (click)="newNote()">
+        ╵                                             ~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'searchQuery' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:13:21:
+      13 │         [(ngModel)]="searchQuery"
+         ╵                      ~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'searchQuery' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:13:21:
+      13 │         [(ngModel)]="searchQuery"
+         ╵                      ~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'onSearch' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:14:17:
+      14 │         (input)="onSearch(searchQuery)" />
+         ╵                  ~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'searchQuery' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:14:26:
+      14 │         (input)="onSearch(searchQuery)" />
+         ╵                           ~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'filteredNotes' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:18:28:
+      18 │         *ngFor="let note of filteredNotes"
+         ╵                             ~~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'selectedNote' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:19:26:
+      19 │         [class.selected]="selectedNote?.id === note.id"
+         ╵                           ~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'selectNote' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:20:17:
+      20 │         (click)="selectNote(note)">
+         ╵                  ~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8004: No pipe found with name 'slice'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:22:55:
+      22 │ ...w-snippet">{{ note.content | slice:0:60 }}{{ note.content.lengt...
+         ╵                                 ~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'deleteNote' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:23:44:
+      23 │ ...lass="delete-btn" (click)="deleteNote(note); $event.stopPropaga...
+         ╵                               ~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'filteredNotes' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:25:37:
+      25 │       <li class="empty-state" *ngIf="filteredNotes.length === 0">
+         ╵                                      ~~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'editMode' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:32:20:
+      32 │     <section *ngIf="editMode" class="note-editor">
+         ╵                     ~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'formTitle' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:35:21:
+      35 │         [(ngModel)]="formTitle"
+         ╵                      ~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'formTitle' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:35:21:
+      35 │         [(ngModel)]="formTitle"
+         ╵                      ~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'formContent' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:42:21:
+      42 │         [(ngModel)]="formContent"
+         ╵                      ~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'formContent' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:42:21:
+      42 │         [(ngModel)]="formContent"
+         ╵                      ~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'saveNote' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:49:25:
+      49 │         <button (click)="saveNote()" [disabled]="!formTitle.trim()">
+         ╵                          ~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'formTitle' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:49:50:
+      49 │         <button (click)="saveNote()" [disabled]="!formTitle.trim()">
+         ╵                                                   ~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'isCreatingNew' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:50:13:
+      50 │           {{ isCreatingNew ? 'Create' : 'Save' }}
+         ╵              ~~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'cancelEdit' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:52:43:
+      52 │ ...  <button class="secondary" (click)="cancelEdit()">Cancel</button>
+         ╵                                         ~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'editMode' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:56:21:
+      56 │     <section *ngIf="!editMode && selectedNote" class="note-details">
+         ╵                      ~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'selectedNote' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:56:33:
+      56 │     <section *ngIf="!editMode && selectedNote" class="note-details">
+         ╵                                  ~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'selectedNote' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:58:42:
+      58 │         <h2 class="note-details-title">{{ selectedNote.title }}</h2>
+         ╵                                           ~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'startEdit' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:60:27:
+      60 │           <button (click)="startEdit()">Edit</button>
+         ╵                            ~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'deleteNote' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:61:46:
+      61 │ ...lass="delete-btn" (click)="deleteNote(selectedNote)">Delete</bu...
+         ╵                               ~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'selectedNote' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:61:57:
+      61 │ ...ss="delete-btn" (click)="deleteNote(selectedNote)">Delete</button>
+         ╵                                        ~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'selectedNote' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:64:43:
+      64 │ ...<div class="note-details-content">{{ selectedNote.content }}</div>
+         ╵                                         ~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'selectedNote' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:66:26:
+      66 │         <span>Created: {{ selectedNote.createdAt | date:'medium' }...
+         ╵                           ~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'selectedNote' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:67:30:
+      67 │ ...    <span>Last edited: {{ selectedNote.updatedAt | date:'medium...
+         ╵                              ~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'editMode' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:71:21:
+      71 │     <section *ngIf="!editMode && !selectedNote" class="main-empty-...
+         ╵                      ~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'selectedNote' does not exist on type 'NotesComponent'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.html:71:34:
+      71 │ ...ction *ngIf="!editMode && !selectedNote" class="main-empty-state">
+         ╵                               ~~~~~~~~~~~~
+
+  Error occurs in the template of component NotesComponent.
+
+    src/app/notes/notes.component.ts:10:15:
+      10 │   templateUrl: './notes.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+polyfills.js         | polyfills        |  90.20 kB | 
+main.js              | main             |  45.02 kB | 
+styles.css           | styles           |   1.73 kB | 
+
+                     | Initial total    | 136.95 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+polyfills.server.mjs | polyfills.server | 572.91 kB | 
+chunk-CJAZEFKO.mjs   | -                |  45.48 kB | 
+server.mjs           | server           |   1.39 kB | 
+main.server.mjs      | main.server      | 800 bytes | 
+
+Application bundle generation complete. [0.608 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+▲ [WARNING] TS-998113: NgClass is not used within the template of NotesComponent [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:17:4:
+      17 │     NgClass,
+         ╵     ~~~~~~~
+
+
+4:26:26 PM [vite] (ssr) ✨ new dependencies optimized: @angular/forms, rxjs
+4:26:26 PM [vite] (ssr) ✨ optimized dependencies changed. reloading
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Server bundles     
+Initial chunk files | Names       |  Raw size
+chunk-QIVVJ2YO.mjs  | -           |  45.48 kB | 
+server.mjs          | server      |   1.39 kB | 
+main.server.mjs     | main.server | 800 bytes | 
+
+Application bundle generation complete. [0.486 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+▲ [WARNING] TS-998113: NgClass is not used within the template of NotesComponent [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:17:4:
+      17 │     NgClass,
+         ╵     ~~~~~~~
+
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |  45.03 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+chunk-SY4TLM2L.mjs  | -           |  45.49 kB | 
+server.mjs          | server      |   1.39 kB | 
+main.server.mjs     | main.server | 800 bytes | 
+
+Application bundle generation complete. [0.382 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+▲ [WARNING] TS-998113: NgClass is not used within the template of NotesComponent [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:17:4:
+      17 │     NgClass,
+         ╵     ~~~~~~~
+
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.168 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS-991010: 'imports' must be an array of components, directives, pipes, or NgModules.
+  Value is of type '[NgForOf, NgIf, (not statically analyzable), FormsModule, SlicePipe, DatePipe]'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:14:11:
+      14 │   imports: [
+         ╵            ^
+
+
+✘ [ERROR] TS2304: Cannot find name 'NgClass'. [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:17:4:
+      17 │     NgClass,
+         ╵     ~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+polyfills.js         | polyfills        |  90.20 kB | 
+main.js              | main             |  45.02 kB | 
+styles.css           | styles           |   1.73 kB | 
+
+                     | Initial total    | 136.95 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+polyfills.server.mjs | polyfills.server | 572.91 kB | 
+chunk-OU4CAVKN.mjs   | -                |  45.48 kB | 
+server.mjs           | server           |   1.39 kB | 
+main.server.mjs      | main.server      | 800 bytes | 
+
+Application bundle generation complete. [0.387 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.376 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property 'notesService' does not exist on type 'NotesComponent'. Did you mean '_notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:89:11:
+      89 │       this.notesService.add({
+         ╵            ~~~~~~~~~~~~
+
+  '_notesService' is declared here.
+
+    src/app/notes/notes.component.ts:35:14:
+      35 │   constructor(private readonly _notesService: NotesService) {
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property 'notesService' does not exist on type 'NotesComponent'. Did you mean '_notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:93:26:
+      93 │       const latest = this.notesService.getSnapshot()[0];
+         ╵                           ~~~~~~~~~~~~
+
+  '_notesService' is declared here.
+
+    src/app/notes/notes.component.ts:35:14:
+      35 │   constructor(private readonly _notesService: NotesService) {
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property 'notesService' does not exist on type 'NotesComponent'. Did you mean '_notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:98:11:
+      98 │       this.notesService.update({
+         ╵            ~~~~~~~~~~~~
+
+  '_notesService' is declared here.
+
+    src/app/notes/notes.component.ts:35:14:
+      35 │   constructor(private readonly _notesService: NotesService) {
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property 'notesService' does not exist on type 'NotesComponent'. Did you mean '_notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:104:27:
+      104 │       const updated = this.notesService.getById(this.selectedNote...
+          ╵                            ~~~~~~~~~~~~
+
+  '_notesService' is declared here.
+
+    src/app/notes/notes.component.ts:35:14:
+      35 │   constructor(private readonly _notesService: NotesService) {
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property 'notesService' does not exist on type 'NotesComponent'. Did you mean '_notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:114:11:
+      114 │       this.notesService.delete(note.id);
+          ╵            ~~~~~~~~~~~~
+
+  '_notesService' is declared here.
+
+    src/app/notes/notes.component.ts:35:14:
+      35 │   constructor(private readonly _notesService: NotesService) {
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property 'notesService' does not exist on type 'NotesComponent'. Did you mean '_notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:136:32:
+      136 │ ... this.filteredNotes = this.notesService.search(this.searchQuery);
+          ╵                               ~~~~~~~~~~~~
+
+  '_notesService' is declared here.
+
+    src/app/notes/notes.component.ts:35:14:
+      35 │   constructor(private readonly _notesService: NotesService) {
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.259 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property 'notesService' does not exist on type 'NotesComponent'. Did you mean '_notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:89:11:
+      89 │       this.notesService.add({
+         ╵            ~~~~~~~~~~~~
+
+  '_notesService' is declared here.
+
+    src/app/notes/notes.component.ts:35:14:
+      35 │   constructor(private readonly _notesService: NotesService) {
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property 'notesService' does not exist on type 'NotesComponent'. Did you mean '_notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:93:26:
+      93 │       const latest = this.notesService.getSnapshot()[0];
+         ╵                           ~~~~~~~~~~~~
+
+  '_notesService' is declared here.
+
+    src/app/notes/notes.component.ts:35:14:
+      35 │   constructor(private readonly _notesService: NotesService) {
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property 'notesService' does not exist on type 'NotesComponent'. Did you mean '_notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:98:11:
+      98 │       this.notesService.update({
+         ╵            ~~~~~~~~~~~~
+
+  '_notesService' is declared here.
+
+    src/app/notes/notes.component.ts:35:14:
+      35 │   constructor(private readonly _notesService: NotesService) {
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property 'notesService' does not exist on type 'NotesComponent'. Did you mean '_notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:104:27:
+      104 │       const updated = this.notesService.getById(this.selectedNote...
+          ╵                            ~~~~~~~~~~~~
+
+  '_notesService' is declared here.
+
+    src/app/notes/notes.component.ts:35:14:
+      35 │   constructor(private readonly _notesService: NotesService) {
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property 'notesService' does not exist on type 'NotesComponent'. Did you mean '_notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:136:32:
+      136 │ ... this.filteredNotes = this.notesService.search(this.searchQuery);
+          ╵                               ~~~~~~~~~~~~
+
+  '_notesService' is declared here.
+
+    src/app/notes/notes.component.ts:35:14:
+      35 │   constructor(private readonly _notesService: NotesService) {
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.287 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property 'notesService' does not exist on type 'NotesComponent'. Did you mean '_notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:136:32:
+      136 │ ... this.filteredNotes = this.notesService.search(this.searchQuery);
+          ╵                               ~~~~~~~~~~~~
+
+  '_notesService' is declared here.
+
+    src/app/notes/notes.component.ts:35:14:
+      35 │   constructor(private readonly _notesService: NotesService) {
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+polyfills.js         | polyfills        |  90.20 kB | 
+main.js              | main             |  45.07 kB | 
+styles.css           | styles           |   1.73 kB | 
+
+                     | Initial total    | 137.00 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+polyfills.server.mjs | polyfills.server | 572.91 kB | 
+chunk-TZDGLGAS.mjs   | -                |  45.53 kB | 
+server.mjs           | server           |   1.39 kB | 
+main.server.mjs      | main.server      | 800 bytes | 
+
+Application bundle generation complete. [0.221 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.232 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property '_notesService' does not exist on type 'NotesComponent'. Did you mean 'notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:92:11:
+      92 │       this._notesService.add({
+         ╵            ~~~~~~~~~~~~~
+
+  'notesService' is declared here.
+
+    src/app/notes/notes.component.ts:43:10:
+      43 │   private notesService: NotesService;
+         ╵           ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property '_notesService' does not exist on type 'NotesComponent'. Did you mean 'notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:96:26:
+      96 │       const latest = this._notesService.getSnapshot()[0];
+         ╵                           ~~~~~~~~~~~~~
+
+  'notesService' is declared here.
+
+    src/app/notes/notes.component.ts:43:10:
+      43 │   private notesService: NotesService;
+         ╵           ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property '_notesService' does not exist on type 'NotesComponent'. Did you mean 'notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:101:11:
+      101 │       this._notesService.update({
+          ╵            ~~~~~~~~~~~~~
+
+  'notesService' is declared here.
+
+    src/app/notes/notes.component.ts:43:10:
+      43 │   private notesService: NotesService;
+         ╵           ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property '_notesService' does not exist on type 'NotesComponent'. Did you mean 'notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:107:27:
+      107 │       const updated = this._notesService.getById(this.selectedNot...
+          ╵                            ~~~~~~~~~~~~~
+
+  'notesService' is declared here.
+
+    src/app/notes/notes.component.ts:43:10:
+      43 │   private notesService: NotesService;
+         ╵           ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property '_notesService' does not exist on type 'NotesComponent'. Did you mean 'notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:117:11:
+      117 │       this._notesService.delete(note.id);
+          ╵            ~~~~~~~~~~~~~
+
+  'notesService' is declared here.
+
+    src/app/notes/notes.component.ts:43:10:
+      43 │   private notesService: NotesService;
+         ╵           ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property '_notesService' does not exist on type 'NotesComponent'. Did you mean 'notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:139:32:
+      139 │ ...this.filteredNotes = this._notesService.search(this.searchQuery);
+          ╵                              ~~~~~~~~~~~~~
+
+  'notesService' is declared here.
+
+    src/app/notes/notes.component.ts:43:10:
+      43 │   private notesService: NotesService;
+         ╵           ~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.299 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property '_notesService' does not exist on type 'NotesComponent'. Did you mean 'notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:92:11:
+      92 │       this._notesService.add({
+         ╵            ~~~~~~~~~~~~~
+
+  'notesService' is declared here.
+
+    src/app/notes/notes.component.ts:43:10:
+      43 │   private notesService: NotesService;
+         ╵           ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property '_notesService' does not exist on type 'NotesComponent'. Did you mean 'notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:96:26:
+      96 │       const latest = this._notesService.getSnapshot()[0];
+         ╵                           ~~~~~~~~~~~~~
+
+  'notesService' is declared here.
+
+    src/app/notes/notes.component.ts:43:10:
+      43 │   private notesService: NotesService;
+         ╵           ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property '_notesService' does not exist on type 'NotesComponent'. Did you mean 'notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:101:11:
+      101 │       this._notesService.update({
+          ╵            ~~~~~~~~~~~~~
+
+  'notesService' is declared here.
+
+    src/app/notes/notes.component.ts:43:10:
+      43 │   private notesService: NotesService;
+         ╵           ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property '_notesService' does not exist on type 'NotesComponent'. Did you mean 'notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:107:27:
+      107 │       const updated = this._notesService.getById(this.selectedNot...
+          ╵                            ~~~~~~~~~~~~~
+
+  'notesService' is declared here.
+
+    src/app/notes/notes.component.ts:43:10:
+      43 │   private notesService: NotesService;
+         ╵           ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property '_notesService' does not exist on type 'NotesComponent'. Did you mean 'notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:146:32:
+      146 │ ...this.filteredNotes = this._notesService.search(this.searchQuery);
+          ╵                              ~~~~~~~~~~~~~
+
+  'notesService' is declared here.
+
+    src/app/notes/notes.component.ts:43:10:
+      43 │   private notesService: NotesService;
+         ╵           ~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.265 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2551: Property '_notesService' does not exist on type 'NotesComponent'. Did you mean 'notesService'? [plugin angular-compiler]
+
+    src/app/notes/notes.component.ts:146:32:
+      146 │ ...this.filteredNotes = this._notesService.search(this.searchQuery);
+          ╵                              ~~~~~~~~~~~~~
+
+  'notesService' is declared here.
+
+    src/app/notes/notes.component.ts:43:10:
+      43 │   private notesService: NotesService;
+         ╵           ~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+polyfills.js         | polyfills        |  90.20 kB | 
+main.js              | main             |  45.16 kB | 
+styles.css           | styles           |   1.73 kB | 
+
+                     | Initial total    | 137.09 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+polyfills.server.mjs | polyfills.server | 572.91 kB | 
+chunk-JAEJJGCO.mjs   | -                |  45.63 kB | 
+server.mjs           | server           |   1.39 kB | 
+main.server.mjs      | main.server      | 800 bytes | 
+
+Application bundle generation complete. [0.438 seconds]
+
+▲ [WARNING] TS-998113: NotesComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:26:
+      8 │   imports: [RouterOutlet, NotesComponent],
+        ╵                           ~~~~~~~~~~~~~~
+
+
+Page reload sent to client(s).

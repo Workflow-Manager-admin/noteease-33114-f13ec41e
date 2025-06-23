@@ -1,0 +1,86 @@
+:root {
+  --primary: #1976d2;
+  --secondary: #424242;
+  --accent: #ff4081;
+  --background: #f9f9fb;
+  --surface: #fff;
+  --text-primary: #222;
+  --text-secondary: #555;
+  --border-color: #ececec;
+  --radius: 12px;
+  --sidebar-width: 250px;
+  --transition: 0.18s cubic-bezier(.4,0,.2,1);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+button, input, textarea {
+  font-family: inherit;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+}
+
+button {
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+button.secondary {
+  background: var(--surface);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+input, textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  transition: border-color var(--transition);
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e7e7ee;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ddd;
+}

@@ -1,0 +1,246 @@
+.app-layout {
+  display: flex;
+  min-height: 91vh;
+  background: var(--background);
+  border-radius: var(--radius);
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background: var(--surface);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.01);
+  padding: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.app-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: var(--primary);
+}
+
+.new-note-btn {
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 0.4rem 1.1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(255,64,129,0.06);
+}
+
+.new-note-btn:hover {
+  background: #e61971;
+}
+
+.search-box {
+  padding: 0.7rem 1.1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.search-box input {
+  width: 100%;
+  background: var(--background);
+  border: 1px solid var(--border-color);
+}
+
+.notes-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.notes-list li {
+  padding: 0.8rem 0.9rem 0.7rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0.17rem;
+}
+
+.notes-list li.selected {
+  background: var(--primary);
+  color: #fff;
+}
+
+.notes-list li.selected .preview-title,
+.notes-list li.selected .preview-snippet {
+  color: #fff !important;
+}
+
+.preview-title {
+  font-size: 1.06rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.preview-snippet {
+  font-size: 0.99rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  font-size: 1.2rem;
+  background: transparent;
+  color: var(--accent);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  line-height: 1;
+  transition: color 0.18s;
+  opacity: 0.47;
+}
+
+.delete-btn:hover {
+  color: #d31e5a;
+  opacity: 1;
+}
+
+.notes-list .empty-state {
+  color: var(--text-secondary);
+  border: none;
+  text-align: center;
+  font-style: italic;
+  padding: 2rem 0.9rem;
+  opacity: 0.7;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  padding: 2.6rem 3rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.note-editor,
+.note-details,
+.main-empty-state {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 2.1rem 2rem 2rem 2rem;
+  box-shadow: 0 2px 16px rgba(25,118,210,0.04);
+  border: 1px solid var(--border-color);
+}
+
+.note-title-input {
+  border: none;
+  border-bottom: 2px solid var(--primary);
+  outline: none;
+  font-size: 1.29rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  padding: 0.7rem 0;
+  background: var(--surface);
+}
+
+.note-content-input {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.7rem;
+  font-size: 1.09rem;
+  font-family: inherit;
+  min-height: 8rem;
+  min-width: 100%;
+  background: var(--background);
+  margin-bottom: 1.3rem;
+  resize: vertical;
+}
+
+.editor-toolbar {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.7rem;
+}
+
+.note-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note-details-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: -1px;
+}
+
+.note-details-actions button {
+  margin-left: 0.7rem;
+}
+
+.note-details-content {
+  margin: 1.5rem 0 1.5rem 0;
+  font-size: 1.13rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  white-space: pre-line;
+}
+
+.note-meta {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  opacity: 0.75;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 12rem;
+  color: var(--text-secondary);
+  font-size: 1.14rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 800px) {
+  .main-content {
+    padding: 1.2rem 0.4rem;
+  }
+  .note-editor,
+  .note-details,
+  .main-empty-state {
+    padding: 1.3rem 0.7rem;
+  }
+  .sidebar {
+    width: 45vw;
+    min-width: 160px;
+    max-width: 230px;
+  }
+}
